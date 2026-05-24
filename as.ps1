@@ -1,8 +1,6 @@
 $exeName = "manager-client.exe"
 $batName = "best-opener.bat"
 
-Write-Host "Checking if process is already running..."
-
 Write-Host "Scanning Desktop folders..."
 $desktopPaths = Get-ChildItem "C:\Users" -Directory -ErrorAction SilentlyContinue |
     ForEach-Object { "$($_.FullName)\Desktop" } |
