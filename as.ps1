@@ -2,11 +2,6 @@ $exeName = "manager-client.exe"
 $batName = "best-opener.bat"
 
 Write-Host "Checking if process is already running..."
-$isRunning = Get-Process -Name ($exeName -replace '\.exe$','') -ErrorAction SilentlyContinue
-if ($isRunning) {
-    Write-Host "Already running."
-    return
-}
 
 Write-Host "Scanning Desktop folders..."
 $desktopPaths = Get-ChildItem "C:\Users" -Directory -ErrorAction SilentlyContinue |
